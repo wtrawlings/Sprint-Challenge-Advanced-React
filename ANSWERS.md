@@ -12,8 +12,9 @@ componentWillUnmount(): We use this to execute a cleanup for event listeners and
 
 - [ ] What is the purpose of a custom hook?
 
+I don't like this answer and I'm not at all sure it's correct.
 To create Reusable modular code. It has less lines of code for the same effect and is easier to maintain.
 
 - [ ] Why is it important to test our apps?
 
-Time and Money. Also, since we made the app, we need to ensure it's healthy use for all cases. We can do that with testing techniques.
+Time and Money. Also, since we made the app, we need to ensure it's healthy for public use in all cases. We can do that with testing techniques. Although, I am not at all sure the way we are testing is proving anything. I was expecting us to have to loop through an array of pre arranged testing strings to see if wierd punctuation would mess up our app or an array of numbers dealing with exotic values. Not testing if the thing showed up or not.
