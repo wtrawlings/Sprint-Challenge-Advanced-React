@@ -1,9 +1,20 @@
 import React from 'react';
 
 function NameData (props) {
-    console.log(`"from inside the NameData component" ${props}`)
+    console.log(props)
+    const data = props.dataSet;
+
+    const displayData = data.map(players => {
+        return(
+            <div>
+                <p>Player {players.id}: {players.name} is from {players.country} </p>
+            </div>
+        );
+    })
     return(
-        null
+        <div>
+            <p>{displayData} </p>
+        </div>
     )
 }
 
