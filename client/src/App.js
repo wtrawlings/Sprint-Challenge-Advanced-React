@@ -1,8 +1,24 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Axios from "axios";
 
-function App() {
+
+class App extends React.Component {
+  constructor() {
+    super()
+    //this is where state will go
+    this.state = {
+      dataset: []
+    }
+  };
+  componentDidMount() {
+    Axios.get("")
+      .then(response => {
+        console.log(response.data)
+        this.setState({dataSet: response.data})
+      })
+  }
   return (
     <div className="App">
       <header className="App-header">
