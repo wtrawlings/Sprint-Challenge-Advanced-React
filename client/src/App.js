@@ -1,5 +1,4 @@
 import React from 'react';
-//import logo from './logo.svg';
 import './App.css';
 import Axios from "axios";
 import NameData from "./components/NameData"
@@ -23,7 +22,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>You can do this Warren!</h1>
-        <p>Here is some data they want displayed</p>
+        <p>Here is some data they want displayed. </p><p>Now we need to make a hook and do a couple of tests.</p>
         <NameData 
           dataSet={this.state.dataSet}
         />

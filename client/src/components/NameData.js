@@ -14,7 +14,7 @@ function NameData (props) {
         );
     })
     return(
-        <div>
+        <div className="lightGrey">
             {displayData}
         </div>
     )
