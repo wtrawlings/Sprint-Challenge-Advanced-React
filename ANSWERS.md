@@ -1,6 +1,6 @@
 - [ ] Why would you use class component over function components (removing hooks from the question)?
 
-That's a good question. First, it may be because you are on a team that uses class components instead of functional components. Hook (functional) components are less code, easier to read, and test.
+That's a good question. First, it may be because you are on a team that uses class components instead of functional components. Hook (functional) components are less code, easier to read, and test. I really like the functional over the class (as you can probalbly tell).
 
 
 - [ ] Name three lifecycle methods and their purposes.
@@ -12,8 +12,7 @@ componentWillUnmount(): We use this to execute a cleanup for event listeners and
 
 - [ ] What is the purpose of a custom hook?
 
-I don't like this answer and I'm not at all sure it's correct.
-To create Reusable modular code. It has less lines of code for the same effect and is easier to maintain.
+To create Reusable modular code. It has less lines of code for the same effect and is easier to maintain. You can identify stateful logic and place it into the hook. If properly formatted you can use this hook in many different locations in reference to the same state.
 
 - [ ] Why is it important to test our apps?
 
