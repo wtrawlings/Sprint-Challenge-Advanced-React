@@ -1,9 +1,11 @@
 import React from 'react';
 
 function NameData (props) {
-    console.log(props)
+    //console.log(props)
+    //this one is empty
     const data = props.dataSet;
-
+    //console.log(data);
+    //this one is full
     const displayData = data.map(players => {
         return(
             <div key={players.id}>
