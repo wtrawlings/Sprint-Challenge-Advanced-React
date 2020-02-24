@@ -6,14 +6,14 @@ function NameData (props) {
 
     const displayData = data.map(players => {
         return(
-            <div>
+            <div key={players.id}>
                 <p>Player {players.id}: {players.name} is from {players.country} </p>
             </div>
         );
     })
     return(
         <div>
-            <p>{displayData} </p>
+            {displayData}
         </div>
     )
 }
