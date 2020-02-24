@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Axios from "axios";
 import NameData from "./components/NameData"
-import useLocalStorage from "./hooks/useLocalStorage";
 
 
 class App extends React.Component {
@@ -34,7 +33,8 @@ class App extends React.Component {
         this.setState({dataSet: response.data})
       })
   }
-   
+  
+
 
 
   render() {
@@ -45,6 +45,7 @@ class App extends React.Component {
         <button onClick={this.toggleMode}> toggle </button>
         <NameData 
           dataSet={this.state.dataSet}
+          clickToggle={this.state.clickToggle}
         />
       </div>
     );
