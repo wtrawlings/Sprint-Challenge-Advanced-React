@@ -16,9 +16,12 @@ class App extends React.Component {
     this.toggleMode = e => {
       e.preventDefault();
       console.log("clicked!")
-      console.log(this.state.clickToggle) 
-      this.state.clickToggle=!this.state.clickToggle;
-      console.log(this.state.clickToggle);// opposite? Toggle DONE!
+      //console.log(this.state.clickToggle) 
+      this.setState({clickToggle: !this.state.clickToggle});
+      console.log(this.state.clickToggle);
+      
+      
+      // opposite? Toggle DONE!
       //const [clickToggle, setClickToggle] = useLocalStorage("key", clickToggle);
       //I can't useLocalStorage in this because it's not a component just a method
       //inside of a component. I want to save clickToggle and use that

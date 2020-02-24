@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect }from 'react';
 import useLocalStorage from "../hooks/useLocalStorage";
 
 
 function NameData (props) {
     //console.log(props)
     //this one is empty
+    const [clickTracker, setClickTracker] = useLocalStorage("key", "");
+    //this is what calls the useLocalStorage hook
+    useEffect(() => {
+        setClickTracker(props.clickToggle)
+    }, [props.clickToggle]);
+    //this was made to control the updates with props.clickToggle
     const data = props.dataSet;
     const subClickToggle = props.clickToggle;
     console.log(subClickToggle)
@@ -20,7 +26,7 @@ function NameData (props) {
     return(
         <div className="lightGrey">
             {displayData}
-            {console.log(subClickToggle)}
+   
         </div>
     )
 }
@@ -28,4 +34,4 @@ function NameData (props) {
 export default NameData;
 
 
-//const [clickToggle, setClickToggle] = useLocalStorage("key", clickToggle);
+//
