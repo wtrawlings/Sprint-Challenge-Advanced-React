@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { render } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
+import { exact } from 'prop-types';
 
 // it('renders without crashing', () => {
 //   const div = document.createElement('div');
@@ -19,6 +20,17 @@ test("verify Warren text is in app", async () => {
   //act
   const verify1 = getByText(/warren/i)
   //assert
-  expect(verify1).toBeInTheDocument();
+  expect(verify1.innerHTML).toBe("You can do this Warren!");
 })
 
+test("verify toggle value change", async () => {
+  //arrange
+  const { getByText } = render (<App />)
+  //act
+  //simulate click
+  fireEvent.click(button);
+  const bool1 = getByText(/true/i);
+  
+  //assert
+  expect()
+})
