@@ -1,13 +1,13 @@
 - [x] Why would you use class component over function components (removing hooks from the question)?
 
-That's a good question. First, it may be because you are on a team that uses class components instead of functional components. Hook (functional) components are less code, easier to read, and test. I really like the functional over the class (as you can probalbly tell).
+That's a good question. First, it may be because you are on a team that uses class components instead of functional components. Hook (functional) components are less code, easier to read, and test. I really like the functional over the class (as you can probalbly tell). Secondly, I have found a lot of projects that start out with the main app in Class - to force certain things to happen at "DidMount" and all components are in functional.
 
 
 - [x] Name three lifecycle methods and their purposes.
 
 componentDidMount(): We used this one in the challenge. At the Birth of the compnent, which is a one time event, you can use this to execute data retrieval, or other one time tasks. Again, this is a one time event at the beginning of the component.
 componentDidUpdate(): We can use this for any components that will update after the birth of the component. An example is an updating news/twitter feed. Right after it is first drawn on the DOM.
-componentWillUnmount(): We use this to execute a cleanup for event listeners and dumping data that no longer has use at the end of the life of a component (when it leaves the dom)
+componentWillUnmount(): We use this to execute a cleanup for event listeners and dumping data that no longer has use at the end of the life of a component (when it leaves the dom- for instance in a Router situation where we go to a different page/section and drop part of the interface).
 
 
 - [x] What is the purpose of a custom hook?

@@ -47,7 +47,7 @@ class App extends React.Component {
         <p>Here is some data they want displayed. </p><p>Now we need to make a hook and do a couple of tests.</p>
         <button onClick={this.toggleMode}> toggle </button>
         <h1>{`Local Storage Check: ${this.state.clickToggle}`}</h1>
-        {console.log("check " + this.state.clickToggle)}
+        {console.log("verify - " + this.state.clickToggle)}
         <NameData 
           dataSet={this.state.dataSet}
           clickToggle={this.state.clickToggle}
