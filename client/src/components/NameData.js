@@ -7,12 +7,13 @@ function NameData (props) {
     //this one is empty
     const [clickTracker, setClickTracker] = useLocalStorage("key", "");
     //this is what calls the useLocalStorage hook
+    const clicker = props.clickToggle
     useEffect(() => {
-        setClickTracker(props.clickToggle)
-    }, [props.clickToggle]);
+        setClickTracker(clicker)
+    }, [clicker]);
     //this was made to control the updates with props.clickToggle
     const data = props.dataSet;
-    const subClickToggle = props.clickToggle;
+    const subClickToggle = clicker;
     console.log(subClickToggle)
     //console.log(data);
     //this one is full

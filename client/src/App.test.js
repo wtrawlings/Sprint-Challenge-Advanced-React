@@ -19,10 +19,10 @@ test("verify Warren text is in app", async () => {
   const { getByText } = render(<App />);
   //act
   const verify1 = getByText(/warren/i)
-  //notice getByText absorbs the whole text 
-  //element not just what was looked for?
+  //notice getByText absorbs the whole text element 
+  //not just what was looked for?
   //you can't just test for .toBe(Warren)
-  
+
   //assert
   expect(verify1.innerHTML).toBe("You can do this Warren!");
 })
